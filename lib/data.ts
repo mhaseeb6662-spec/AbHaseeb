@@ -100,7 +100,7 @@ export const projects: Project[] = [
     title: "Renoviah Talent — HR Management & AI Platform",
     description:
       "Modern full-stack HR & talent management web platform integrated with AI screening, candidate tracking pipeline, smart hiring workflows, and comprehensive analytics dashboard.",
-    image: "/projects/renovia-talent.jpg",
+    image: "/projects/renovia-talent.png",
     tags: [
       "Full Stack",
       "Next.js",
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     title: "Aqua Fishing Hub — Full-Stack Enterprise ERP",
     description:
       "End-to-end Enterprise Resource Planning (ERP) platform with complete multi-module integration for fisheries supply chain, cold storage inventory, fish stock orders, and real-time financial tracking.",
-    image: "/projects/aqua-fishing.jpg",
+    image: "/projects/aqua-fishing.png",
     tags: [
       "Full Stack",
       "React",
