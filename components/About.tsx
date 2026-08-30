@@ -31,39 +31,32 @@ const About = () => {
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1} className="space-y-4 text-sm leading-relaxed text-paper-dim sm:text-base">
-    <p>
-  I am a passionate Full Stack Developer and Software Engineer with 2+ years of
-  experience, specializing in the MERN stack, Next.js, and PHP/MySQL. I focus on
-  building scalable web applications, solving real-world problems, writing clean
-  and maintainable code, and continuously exploring modern technologies.
-</p>
-<p>
-  I specialize in React.js, Next.js, Node.js, Express.js, MongoDB, PHP, MySQL,
-  and Firebase, along with WordPress theme development and Elementor. I have
-  successfully deployed multiple projects on platforms like Hostinger and GitHub,
-  and I am also expanding my skills in REST APIs, authentication, and server-side
-  programming.
-</p>
-<p>
-  When I code, I explore new technologies, experiment with frameworks, and
-  continuously learn and improve. Currently, I am learning Python, with the
-  long-term goal of becoming a Full Stack AI Engineer, combining web development
-  expertise with artificial intelligence to build smarter, more powerful
-  applications.
-</p>
+              <p>
+                I am a passionate Full Stack Software Engineer and Mobile App Developer with 2+ years
+                of experience, specializing in React.js, Next.js, React Native, Node.js, Express.js, and MongoDB.
+                I focus on building scalable web & mobile applications, architecting robust APIs, writing clean
+                maintainable code, and solving complex real-world challenges.
+              </p>
+              <p>
+                From enterprise ERPs and AI-driven HR dashboards to interactive mobile applications like the
+                International Quran Academy app, I engineer end-to-end solutions emphasizing responsive design,
+                secure authentication, real-time communication, and optimal performance.
+              </p>
+              <p>
+                Currently, I am actively expanding my backend and data stack with <strong>NestJS</strong> and <strong>PostgreSQL</strong>,
+                along with modern architectural patterns. My forward-looking focus is directed towards <strong>Agentic AI</strong> —
+                building intelligent autonomous systems, AI workflows, and next-generation smart applications.
+              </p>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.15}>
               <div className="card-premium relative p-5 sm:p-6">
                 <span className="eyebrow mb-3 block">Mission</span>
-             <p className="font-display text-base italic leading-relaxed text-paper sm:text-lg">
-  My mission is to become one of Pakistan’s leading Full Stack AI Engineers by
-  combining expertise in the MERN stack with AI automation to build intelligent,
-  scalable, and impactful web applications. I aspire to create innovative
-  solutions that solve real-world problems, deliver outstanding user
-  experiences, and prepare myself for opportunities at world-class technology
-  companies like Google.
-</p>
+                <p className="font-display text-base italic leading-relaxed text-paper sm:text-lg">
+                  My mission is to engineer high-impact, scalable digital solutions by combining full-stack & mobile
+                  expertise with autonomous <strong>Agentic AI</strong> workflows. I aspire to solve real-world problems,
+                  deliver exceptional user experiences, and contribute to cutting-edge global technology products.
+                </p>
               </div>
             </RevealOnScroll>
           </div>
