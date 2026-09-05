@@ -194,6 +194,22 @@ export const projects: Project[] = [
   },
 
   {
+    title: "Uplintix — Creative & Technology Solutions",
+    description:
+      "Premium creative and technology company website showcasing content, web, software, AI, automation, and digital solutions through a modern responsive experience.",
+    image: "/projects/uplintix.png",
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "Three.js",
+      "React Router",
+      "Framer Motion",
+      "Modern UI/UX"
+    ],
+    link: "https://uplintix.com",
+    github: "https://github.com/mhaseeb6662-spec/Uplintix",
+  },
+  {
     title: "JM Falcon Rise",
     description:
       "Corporate website showcasing services and brand identity with premium responsive design.",
