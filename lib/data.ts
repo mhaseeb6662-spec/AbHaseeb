@@ -81,7 +81,7 @@ export const projects: Project[] = [
     title: "8111c — Betting Game Platform",
     description:
       "A high-performance online betting and gaming platform. Built with a robust full-stack architecture to handle real-time interactions, secure data management, and scalable server deployments.",
-    image: "/projects/8111c.png",
+    image: "/projects/8111c.jpg",
     tags: [
       "Next.js",
       "NestJS",
