@@ -78,6 +78,39 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "8111c — Betting Game Platform",
+    description:
+      "A high-performance online betting and gaming platform. Built with a robust full-stack architecture to handle real-time interactions, secure data management, and scalable server deployments.",
+    image: "/projects/8111c.png",
+    tags: [
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "Server Deployment",
+      "WebSockets",
+      "Full Stack",
+    ],
+    link: "https://8111c.com/",
+  },
+  {
+    title: "Usama Vet Surgical — eCommerce & Admin Dashboard",
+    description:
+      "Comprehensive eCommerce platform with a fully functional admin dashboard. Features complete product management, dynamic content control, and robust order tracking, all manageable directly from the admin panel.",
+    image: "/projects/usama-vet.png",
+    tags: [
+      "Full Stack",
+      "eCommerce",
+      "Admin Panel",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "API Integration",
+    ],
+    link: "https://usamavetsurgical.com/",
+    github: "https://github.com/mhaseeb6662-spec/Usama-vet",
+    confidential: false,
+  },
+  {
     title: "International Quran Academy App",
     description:
       "Full-featured mobile application for an International Quran Academy featuring live virtual classes, student & teacher management, real-time messaging, bulk notifications, and complete academic tracking.",
@@ -94,26 +127,6 @@ export const projects: Project[] = [
       "Role-Based Access",
     ],
     confidential: true,
-    github: undefined,
-  },
-  {
-    title: "Renoviah Talent — HR Management & AI Platform",
-    description:
-      "Modern full-stack HR & talent management web platform integrated with AI screening, candidate tracking pipeline, smart hiring workflows, and comprehensive analytics dashboard.",
-    image: "/projects/renovia-talent.png",
-    tags: [
-      "Full Stack",
-      "Next.js",
-      "React",
-      "Node.js",
-      "AI Integration",
-      "Tailwind CSS",
-      "MongoDB",
-      "REST API",
-      "Analytics",
-    ],
-    link: "https://renoviatalent.in/",
-    confidential: false,
     github: undefined,
   },
   {
