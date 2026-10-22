@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Abdul Haseeb",
   shortName: "Ab Haseeb",
-  role: "Software Engineer · Full-Stack & React Native Developer",
+  role: "Software Engineer · Full-Stack, React Native & 3D Web Developer",
   email: "developerweb351@gmail.com",
   phone: "+92 304 3537341",
   location: "Khanewal, Punjab, Pakistan",
@@ -13,10 +13,12 @@ export const siteConfig = {
   facebook: "https://web.facebook.com/abdu.haseeb.75/",
   resumeUrl: "/Abhaseebcv.pdf",
   description:
-    "Full-Stack Software Engineer & Mobile App Developer with hands-on experience in React.js, Next.js, React Native, Node.js, Express.js, NestJS, MongoDB, and PostgreSQL. Passionate about AI integration and transitioning into Agentic AI systems to build intelligent, autonomous, and high-performance digital solutions.",
+    "Full-Stack Software Engineer & Mobile App Developer with hands-on experience in React.js, Next.js, React Native, Node.js, Express.js, Three.js, WebGL, NestJS, MongoDB, and PostgreSQL. Passionate about 3D interactive web experiences, AI integration, and transitioning into Agentic AI systems to build intelligent, autonomous, and high-performance digital solutions.",
 };
 
 export const skills = [
+  "Three.js & WebGL",
+  "GSAP Animations",
   "React Native",
   "React.js",
   "Next.js",
@@ -29,6 +31,7 @@ export const skills = [
   "Express.js",
   "MongoDB",
   "Tailwind CSS",
+  "Lenis Smooth Scroll",
   "RESTful APIs",
   "Socket.io (Real-Time)",
   "JWT Authentication",
@@ -74,9 +77,99 @@ export type Project = {
   link?: string;
   github?: string;
   confidential?: boolean;
+  category?: "3d" | "fullstack" | "mobile";
+  badge?: string;
+  is3D?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Relay — 3D Cinematic Workflow Platform",
+    description:
+      "Advanced cinematic workflow landing platform recreation featuring dynamic 3D energy ribbons, interactive motion design, smooth fluid micro-interactions, and responsive typography.",
+    image: "/projects/gallery-1.png",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "GSAP Motion",
+      "Interactive 3D",
+      "Cinematic UI",
+      "Tailwind CSS",
+    ],
+    link: "https://gallary1.vercel.app/",
+    category: "3d",
+    badge: "3D Cinematic",
+    is3D: true,
+  },
+  {
+    title: "Brewnns — Interactive 3D Coffee World",
+    description:
+      "Immersive 3D interactive coffee world featuring a real-time WebGL 3D cup model with dynamic mouse camera physics, GSAP ScrollTrigger timeline, and buttery-smooth Lenis scrolling.",
+    image: "/projects/gallery-2.png",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "3D Modeling",
+      "GSAP ScrollTrigger",
+      "Lenis Scroll",
+      "Interactive",
+    ],
+    link: "https://gallary-secound.vercel.app/",
+    category: "3d",
+    badge: "3D WebGL World",
+    is3D: true,
+  },
+  {
+    title: "Ridgeline Roofing — 3D Architectural Showcase",
+    description:
+      "Architectural & roofing services website crafted with interactive scroll physics, GSAP smooth timeline reveals, dynamic cards, responsive typography, and tactile UI interactions.",
+    image: "/projects/gallery-3.png",
+    tags: [
+      "GSAP ScrollTrigger",
+      "Lenis Scroll",
+      "3D Motion",
+      "Interactive UI",
+      "Web Performance",
+    ],
+    link: "https://gallary-3rd.vercel.app/",
+    category: "3d",
+    badge: "3D Scroll Motion",
+    is3D: true,
+  },
+  {
+    title: "Halden — 3D Luxury Furniture Gallery",
+    description:
+      "High-end luxury furniture digital showroom with tactile 3D perspective hover cards, micro-interactions, smooth kinetic momentum scrolling, and minimalist Swiss design aesthetics.",
+    image: "/projects/gallery-4.png",
+    tags: [
+      "Three.js",
+      "3D Tilt Cards",
+      "GSAP",
+      "Lenis Momentum",
+      "Minimalist Design",
+    ],
+    link: "https://gallary-4th.vercel.app/",
+    category: "3d",
+    badge: "3D Interactive Cards",
+    is3D: true,
+  },
+  {
+    title: "Stemline — 3D Cinematic Storytelling",
+    description:
+      "High-concept 'Send first, be seen later' digital experience featuring cinematic pacing, immersive sound/motion cues, fluid WebGL transitions, and responsive GSAP choreography.",
+    image: "/projects/gallery-5.png",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "3D Animation",
+      "GSAP Storytelling",
+      "Cinematic Motion",
+    ],
+    link: "https://gallary-5th.vercel.app/",
+    category: "3d",
+    badge: "3D Storytelling",
+    is3D: true,
+  },
   {
     title: "8111c — Betting Game Platform",
     description:
@@ -91,6 +184,7 @@ export const projects: Project[] = [
       "Full Stack",
     ],
     link: "https://8111c.com/",
+    category: "fullstack",
   },
   {
     title: "Usama Vet Surgical — eCommerce & Admin Dashboard",
@@ -109,6 +203,7 @@ export const projects: Project[] = [
     link: "https://usamavetsurgical.com/",
     github: "https://github.com/mhaseeb6662-spec/Usama-vet",
     confidential: false,
+    category: "fullstack",
   },
   {
     title: "International Quran Academy App",
@@ -128,6 +223,7 @@ export const projects: Project[] = [
     ],
     confidential: true,
     github: undefined,
+    category: "mobile",
   },
   {
     title: "Aqua Fishing Hub — Full-Stack Enterprise ERP",
@@ -148,6 +244,7 @@ export const projects: Project[] = [
     link: "https://aquafishinghub.com",
     confidential: false,
     github: undefined,
+    category: "fullstack",
   },
   {
     title: "POS",
@@ -157,6 +254,7 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind CSS", "Firebase"],
     link: "https://sunny-pasca-9d6cd2.netlify.app/",
     github: "https://github.com/mhaseeb6662-spec/POS-React-js",
+    category: "mobile",
   },
 
   {
@@ -167,6 +265,7 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind CSS", "Firebase"],
     link: "https://spiffy-bombolone-0ccece.netlify.app/",
     github: "https://github.com/mhaseeb6662-spec/invoicegenerating-app-react-js",
+    category: "mobile",
   },
   {
     title: "Trading Web App",
@@ -176,6 +275,7 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind CSS", "Firebase"],
     link: "https://majestic-bubblegum-e59f83.netlify.app/",
     github: "https://github.com/mhaseeb6662-spec/Trading-web-app-react-js",
+    category: "mobile",
   },
   {
     title: "Gemini AI Chat Clone",
@@ -185,6 +285,7 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind CSS"],
     link: "https://lively-seahorse-77ba91.netlify.app/",
     github: "https://github.com/mhaseeb6662-spec/chatapp",
+    category: "mobile",
   },
 
   {
@@ -204,6 +305,7 @@ export const projects: Project[] = [
     ],
     link: "https://ikhlasrishtacenters.com/",
     github: "https://github.com/mhaseeb6662-spec/NikkahFullstack",
+    category: "fullstack",
   },
 
   {
@@ -221,6 +323,9 @@ export const projects: Project[] = [
     ],
     link: "https://uplintix.com",
     github: "https://github.com/mhaseeb6662-spec/Uplintix",
+    category: "3d",
+    badge: "3D Web / Three.js",
+    is3D: true,
   },
   {
     title: "JM Falcon Rise",
@@ -239,6 +344,7 @@ export const projects: Project[] = [
     ],
     link: "https://jmfalconrise.com/",
     github: "https://github.com/mhaseeb6662-spec/jmfalconrise", // Replace with the actual repository
+    category: "fullstack",
   },
   {
     title: "Pak Motors — Dealership Management System",
@@ -262,6 +368,7 @@ export const projects: Project[] = [
     ],
     confidential: true,
     github: undefined,
+    category: "fullstack",
   },
 
   {
@@ -285,6 +392,7 @@ export const projects: Project[] = [
     ],
     confidential: true,
     github: undefined,
+    category: "fullstack",
   },
   {
     title: "Steel POS & Inventory Management System",
@@ -307,6 +415,7 @@ export const projects: Project[] = [
     ],
     confidential: true,
     github: undefined,
+    category: "fullstack",
   },
 
   {
@@ -329,6 +438,7 @@ export const projects: Project[] = [
     link: "https://kharanmobileparts.com/",
     confidential: false,
     github: undefined,
+    category: "fullstack",
   },
 
   {
@@ -350,6 +460,7 @@ export const projects: Project[] = [
     link: "https://salemarketo.com/",
     confidential: false,
     github: undefined,
+    category: "fullstack",
   },
 ];
 
