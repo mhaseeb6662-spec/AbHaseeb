@@ -32,20 +32,20 @@ const About = () => {
 
             <RevealOnScroll delay={0.1} className="space-y-4 text-sm leading-relaxed text-paper-dim sm:text-base">
               <p>
-                I am a passionate Full Stack Software Engineer and Mobile App Developer with 2+ years
-                of experience, specializing in React.js, Next.js, React Native, Node.js, Express.js, and MongoDB.
+                I am a passionate Full Stack Software Engineer, Generative AI & Python Bot Developer with 2+ years
+                of hands-on experience, specializing in React.js, Next.js, React Native, Python automation, Node.js, Express.js, and modern AI architectures.
                 I focus on building scalable web & mobile applications, architecting robust APIs, writing clean
-                maintainable code, and solving complex real-world challenges.
+                maintainable code, and solving complex real-world automation challenges.
               </p>
               <p>
-                From enterprise ERPs and AI-driven HR dashboards to interactive mobile applications like the
-                International Quran Academy app, I engineer end-to-end solutions emphasizing responsive design,
-                secure authentication, real-time communication, and optimal performance.
+                Beyond full-stack web and mobile systems, I build high-speed <strong>Python automation bots</strong> — including
+                automated flight/ticket reservation bots and high-demand passport appointment tracking systems with anti-bot bypass & captcha solving.
+                I also engineer <strong>Generative AI</strong> applications and autonomous Slack agents powered by Google Gemini and OpenAI LLMs.
               </p>
               <p>
                 Currently, I am actively expanding my backend and data stack with <strong>NestJS</strong> and <strong>PostgreSQL</strong>,
-                along with modern architectural patterns. My forward-looking focus is directed towards <strong>Agentic AI</strong> —
-                building intelligent autonomous systems, AI workflows, and next-generation smart applications.
+                while deeply focusing on <strong>Generative & Agentic AI</strong> — building autonomous agent workflows,
+                LLM tool-calling systems, and next-generation intelligent applications.
               </p>
             </RevealOnScroll>
 

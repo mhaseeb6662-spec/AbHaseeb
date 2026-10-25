@@ -53,9 +53,9 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="font-display text-4xl font-semibold leading-[1.1] sm:text-5xl sm:leading-[1.05] md:text-6xl lg:text-7xl"
               >
-                MERN <span className="text-gradient">Stack</span>
+                Full-Stack & <span className="text-gradient">GenAI</span>
                 <br />
-                Developer
+                Engineer
                 <br />
                 <span className="font-display font-normal italic text-paper-dim">Excellence</span>
               </motion.h1>

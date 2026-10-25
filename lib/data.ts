@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Abdul Haseeb",
   shortName: "Ab Haseeb",
-  role: "Software Engineer · Full-Stack, React Native & 3D Web Developer",
+  role: "Software Engineer · Generative AI, Full-Stack & Python Bot Developer",
   email: "developerweb351@gmail.com",
   phone: "+92 304 3537341",
   location: "Khanewal, Punjab, Pakistan",
@@ -13,10 +13,16 @@ export const siteConfig = {
   facebook: "https://web.facebook.com/abdu.haseeb.75/",
   resumeUrl: "/Abhaseebcv.pdf",
   description:
-    "Full-Stack Software Engineer & Mobile App Developer with hands-on experience in React.js, Next.js, React Native, Node.js, Express.js, Three.js, WebGL, NestJS, MongoDB, and PostgreSQL. Passionate about 3D interactive web experiences, AI integration, and transitioning into Agentic AI systems to build intelligent, autonomous, and high-performance digital solutions.",
+    "Full-Stack Software Engineer & Generative AI Developer with deep expertise in LLM applications, Agentic AI systems, Python automation bots, React.js, Next.js, React Native, Node.js, Express.js, Three.js, WebGL, NestJS, and PostgreSQL. Passionate about engineering autonomous agents, high-speed ticket & passport booking bots, and modern 3D web experiences.",
 };
 
 export const skills = [
+  "Generative AI & LLMs",
+  "Agentic AI & LangChain",
+  "Python & Automation Bots",
+  "Selenium & Playwright",
+  "OpenAI & Gemini APIs",
+  "Prompt Engineering",
   "Three.js & WebGL",
   "GSAP Animations",
   "React Native",
@@ -26,7 +32,6 @@ export const skills = [
   "JavaScript (ES6+)",
   "NestJS (Learning)",
   "PostgreSQL (Learning)",
-  "Agentic AI (Focus)",
   "Node.js",
   "Express.js",
   "MongoDB",
@@ -77,12 +82,87 @@ export type Project = {
   link?: string;
   github?: string;
   confidential?: boolean;
-  category?: "3d" | "fullstack" | "mobile";
+  category?: "3d" | "ai" | "fullstack" | "mobile";
   badge?: string;
   is3D?: boolean;
+  isAI?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Python Flight & Ticket Booking Bot",
+    description:
+      "High-speed automated ticket reservation & seat monitoring bot written in Python using Playwright/Selenium & AsyncIO. Features real-time route scanning, automated passenger checkout, Cloudflare Turnstile captcha bypassing, proxy pool rotation, and instant alerts via Telegram & WhatsApp.",
+    image: "/projects/ticket-bot.png",
+    tags: [
+      "Python 3.12",
+      "Playwright",
+      "Selenium",
+      "AsyncIO",
+      "Captcha Bypass",
+      "Telegram API",
+      "Automation",
+    ],
+    github: "https://github.com/mhaseeb6662-spec",
+    category: "ai",
+    badge: "Python Automation",
+    isAI: true,
+  },
+  {
+    title: "Passport Appointment & Slot Booking Bot",
+    description:
+      "Autonomous Python bot engineered for high-demand passport appointment tracking and instant slot booking. Implements AI OCR captcha solving, continuous slot polling, dynamic session management, anti-bot detection avoidance, and immediate SMS/calendar alerts.",
+    image: "/projects/passport-bot.png",
+    tags: [
+      "Python",
+      "Selenium Wire",
+      "Captcha OCR",
+      "AsyncIO",
+      "Anti-Bot Bypass",
+      "REST API",
+      "Bot Engine",
+    ],
+    github: "https://github.com/mhaseeb6662-spec",
+    category: "ai",
+    badge: "Python Bot",
+    isAI: true,
+  },
+  {
+    title: "Haseeb AI — Generative Desktop Assistant",
+    description:
+      "Cross-platform Generative AI desktop application engineered with Electron.js, React, and Google Gemini API. Offers streaming LLM responses, multimodal prompt engineering, local codebase comprehension, syntax-highlighted code generation, and vector memory buffers.",
+    image: "/projects/genai-assistant.png",
+    tags: [
+      "Generative AI",
+      "Gemini API",
+      "Electron.js",
+      "React",
+      "Prompt Engineering",
+      "TypeScript",
+    ],
+    github: "https://github.com/mhaseeb6662-spec/chatgpt",
+    category: "ai",
+    badge: "Generative AI",
+    isAI: true,
+  },
+  {
+    title: "Eve — Autonomous Slack AI Agent",
+    description:
+      "Autonomous Agentic AI system integrated into Slack channels for automated team workflow execution, multi-step tool calling, incident diagnosis via AWS logs, and dynamic task delegation without human intervention.",
+    image: "/projects/slack-agent.png",
+    tags: [
+      "Agentic AI",
+      "Slack Bot SDK",
+      "Tool Calling",
+      "TypeScript",
+      "Node.js",
+      "Vercel Serverless",
+    ],
+    github: "https://github.com/mhaseeb6662-spec/eve-slack-agent",
+    category: "ai",
+    badge: "Agentic AI",
+    isAI: true,
+  },
   {
     title: "Relay — 3D Cinematic Workflow Platform",
     description:
@@ -278,14 +358,22 @@ export const projects: Project[] = [
     category: "mobile",
   },
   {
-    title: "Gemini AI Chat Clone",
+    title: "Gemini AI Chat Assistant",
     description:
-      "AI-powered chat app inspired by Gemini with real-time responses and clean UI.",
+      "Interactive Generative AI chat platform inspired by Google Gemini. Features real-time streaming AI responses, prompt engineering, clean UI, and responsive conversation handling.",
     image: "/projects/gemini-chat.png",
-    tags: ["React", "Tailwind CSS"],
+    tags: [
+      "Generative AI",
+      "Gemini API",
+      "React",
+      "Tailwind CSS",
+      "Prompt Engineering",
+    ],
     link: "https://lively-seahorse-77ba91.netlify.app/",
     github: "https://github.com/mhaseeb6662-spec/chatapp",
-    category: "mobile",
+    category: "ai",
+    badge: "AI Chat Assistant",
+    isAI: true,
   },
 
   {
