@@ -216,6 +216,60 @@ export const projects: Project[] = [
     is3D: true,
   },
   {
+    title: "Ferro Room — 3D Interactive Print Shelf (Gallery #6)",
+    description:
+      "Architectural private print shelf experience built with real-time Three.js WebGL lighting, interactive spatial room coordinates, smooth momentum physics, and curated tactile typography.",
+    image: "/projects/gallery-6.png",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "3D Room Scene",
+      "Spatial Motion",
+      "Interactive 3D",
+      "GSAP",
+    ],
+    link: "https://gallary-6th.vercel.app",
+    category: "3d",
+    badge: "3D Spatial Room",
+    is3D: true,
+  },
+  {
+    title: "Virell — 3D Particle Morphing Field (Gallery #8)",
+    description:
+      "High-concept cinematic identity field featuring continuous Three.js particle morphing through multi-stage geometric transformations (crescent, cloud, triangle, starburst) with dynamic viewport responsiveness.",
+    image: "/projects/gallery-8.png",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "Particle Morphing",
+      "3D Shaders",
+      "GSAP Motion",
+      "Creative Dev",
+    ],
+    link: "https://gallary-8th.vercel.app",
+    category: "3d",
+    badge: "3D Particle Field",
+    is3D: true,
+  },
+  {
+    title: "Voltara — 3D Depth Ribbons & Lighting (Gallery #9)",
+    description:
+      "High-impact 3D brand environment engineered with Three.js RoomEnvironment lighting, multi-layered depth ribbons, metallic 3D emblem rendering, and sharp kinetic animation choreography.",
+    image: "/projects/gallery-9.png",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "RoomEnvironment",
+      "3D Ribbons",
+      "Metallic Shaders",
+      "Cinematic UI",
+    ],
+    link: "https://gallary-9th.vercel.app",
+    category: "3d",
+    badge: "3D Emblem & Ribbons",
+    is3D: true,
+  },
+  {
     title: "Basharat Higher Secondary School — Official Web Portal",
     description:
       "Comprehensive official web platform for Basharat Higher Secondary School (BHSS) covering 15+ standardized portals including academic curricula, admissions desk, fee structure, boarding wings, live WhatsApp integration, and optimized responsive performance.",
