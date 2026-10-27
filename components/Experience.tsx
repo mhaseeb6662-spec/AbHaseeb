@@ -42,9 +42,16 @@ const Experience = () => {
                   }`}
                 >
                   <div className="card-premium p-5 sm:p-6">
-                    <span className="font-mono text-[11px] uppercase tracking-wide text-cyan sm:text-xs">
-                      {exp.period}
-                    </span>
+                    <div className={`flex items-center gap-2 ${idx % 2 === 0 ? "md:justify-end" : ""}`}>
+                      <span className="font-mono text-[11px] uppercase tracking-wide text-cyan sm:text-xs">
+                        {exp.period}
+                      </span>
+                      {exp.current && (
+                        <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-emerald-400">
+                          Active · Part-Time
+                        </span>
+                      )}
+                    </div>
                     <h3 className="mt-2 text-lg font-semibold sm:text-xl">{exp.role}</h3>
                     <p className="text-sm text-paper-dim sm:text-base">{exp.company}</p>
                     <p className="mt-3 text-sm text-paper-dim sm:mt-4">{exp.description}</p>

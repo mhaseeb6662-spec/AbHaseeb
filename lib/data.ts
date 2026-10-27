@@ -599,26 +599,24 @@ export type Experience = {
 };
 
 export const experiences: Experience[] = [
-
-    {
+  {
     period: "2026 — Present",
-    role: "MERN Stack Developer (Remote)",
+    role: "MERN Stack Developer (Remote / Part-Time)",
     company: "Norleads — Poland (International Company)",
     description:
-      "Contributed as a remote MERN Stack Developer for an international client based in Poland, building and maintaining full-stack features across the React frontend and Node.js/Express backend, working with a distributed team in a fully remote setup.",
+      "Working as a remote part-time MERN Stack Developer for an international client based in Poland, engineering and maintaining full-stack features across the React frontend and Node.js/Express backend, working with a distributed team in a modern agile environment.",
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "REST API"],
-    current: false,
+    current: true,
   },
   {
-    period: "2024 — Present",
+    period: "2024 — July 2026",
     role: "MERN Stack Developer",
     company: "Okiiee Software House, Multan",
     description:
-      "Working as a MERN Stack Developer, building and maintaining full-stack web applications. Developing scalable backend APIs with Node.js and Express, managing databases with MongoDB, and creating responsive frontend interfaces using React. Focused on authentication, CRUD operations, and performance optimization.",
+      "Served as a MERN Stack Developer, building and maintaining full-stack web applications. Developed scalable backend APIs with Node.js and Express, managed databases with MongoDB, and created responsive frontend interfaces using React. Focused on authentication, CRUD operations, and performance optimization.",
     technologies: ["React", "Node.js", "Express.js", "MongoDB"],
-    current: true,
+    current: false,
   },
-
   {
     period: "2023 — 2025",
     role: "WordPress Developer",
