@@ -7,6 +7,7 @@ import { Loader } from "../Loader";
 import { CustomCursor } from "../CustomCursor";
 import { ScrollProgress } from "../ScrollProgress";
 import { ScrollToTop } from "../ScrollToTop";
+import { FloatingWhatsApp } from "../FloatingWhatsApp";
 
 export const Providers = ({ children }: { children: ReactNode }) => {
   return (
@@ -17,6 +18,7 @@ export const Providers = ({ children }: { children: ReactNode }) => {
         <ScrollProgress />
         {children}
         <ScrollToTop />
+        <FloatingWhatsApp />
       </SmoothScroll>
     </ThemeProvider>
   );

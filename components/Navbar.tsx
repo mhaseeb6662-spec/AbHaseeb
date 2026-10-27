@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
+import { BsWhatsapp } from "react-icons/bs";
 import { Button } from "./ui/Button";
 import { ThemeToggle } from "./ThemeToggle";
 import { navLinks, siteConfig } from "@/lib/data";
@@ -95,13 +96,37 @@ const Navbar = () => {
           <ThemeToggle />
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center gap-2.5">
+          <a
+            href={siteConfig.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Chat on WhatsApp"
+            data-cursor-hover
+            className="group flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-emerald-400 backdrop-blur-md transition-all duration-300 hover:border-emerald-400 hover:bg-emerald-500 hover:text-ink hover:shadow-lg hover:shadow-emerald-500/30 hover:scale-105"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            <BsWhatsapp className="h-3.5 w-3.5 transition-transform group-hover:scale-110" />
+            <span>WhatsApp</span>
+          </a>
           <Button size="sm" onClick={scrollToContact}>
             Contact Me
           </Button>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <a
+            href={siteConfig.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-500/15 text-emerald-400 transition-all hover:scale-105 hover:bg-emerald-500 hover:text-ink"
+          >
+            <BsWhatsapp className="h-4 w-4" />
+          </a>
           <ThemeToggle />
           <button
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -134,9 +159,21 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="mt-2 w-full" onClick={scrollToContact}>
-                Contact Me
-              </Button>
+              <div className="mt-3 flex flex-col gap-2">
+                <a
+                  href={siteConfig.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 rounded-full bg-emerald-500 py-2.5 font-mono text-xs font-bold text-ink shadow-lg shadow-emerald-500/25 transition-all hover:bg-emerald-400"
+                >
+                  <BsWhatsapp className="h-4 w-4" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+                <Button size="sm" className="w-full" onClick={scrollToContact}>
+                  Contact Me
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}

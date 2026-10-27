@@ -23,7 +23,7 @@ export const ScrollToTop = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Scroll to top"
           data-cursor-hover
-          className="glass-strong fixed bottom-6 right-6 z-[80] flex h-12 w-12 items-center justify-center rounded-full text-paper transition-colors hover:text-cyan sm:bottom-8 sm:right-8"
+          className="glass-strong fixed bottom-22 right-6 z-[80] flex h-11 w-11 items-center justify-center rounded-full text-paper transition-all hover:text-cyan hover:scale-105 sm:bottom-26 sm:right-8 sm:h-12 sm:w-12"
         >
           <HiArrowUp className="h-5 w-5" />
         </motion.button>
