@@ -38,9 +38,9 @@ const About = () => {
                 maintainable code, and solving complex real-world automation challenges.
               </p>
               <p>
-                Beyond full-stack web and mobile systems, I build high-speed <strong>Python automation bots</strong> — including
-                automated flight/ticket reservation bots and high-demand passport appointment tracking systems with anti-bot bypass & captcha solving.
-                I also engineer <strong>Generative AI</strong> applications and autonomous Slack agents powered by Google Gemini and OpenAI LLMs.
+                Beyond full-stack web and mobile systems, I build high-speed <strong>Python automation bots</strong> — specializing in
+                automated client intake, appointment slot monitoring, and streamlined application processing for visa consultancy agencies.
+                I also engineer <strong>Generative AI</strong> desktop applications and conversational assistants powered by Google Gemini and OpenAI LLMs.
               </p>
               <p>
                 Currently, I am actively expanding my backend and data stack with <strong>NestJS</strong> and <strong>PostgreSQL</strong>,

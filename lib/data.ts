@@ -13,7 +13,7 @@ export const siteConfig = {
   facebook: "https://web.facebook.com/abdu.haseeb.75/",
   resumeUrl: "/Abhaseebcv.pdf",
   description:
-    "Full-Stack Software Engineer & Generative AI Developer with deep expertise in LLM applications, Agentic AI systems, Python automation bots, React.js, Next.js, React Native, Node.js, Express.js, Three.js, WebGL, NestJS, and PostgreSQL. Passionate about engineering autonomous agents, high-speed ticket & passport booking bots, and modern 3D web experiences.",
+    "Full-Stack Software Engineer & Generative AI Developer with deep expertise in LLM applications, Agentic AI systems, Python automation bots, React.js, Next.js, React Native, Node.js, Express.js, Three.js, WebGL, NestJS, and PostgreSQL. Passionate about engineering autonomous agents, high-efficiency Python visa agency automation bots, and modern 3D web experiences.",
 };
 
 export const skills = [
@@ -78,6 +78,7 @@ export type Project = {
   title: string;
   description: string;
   image: string;
+  video?: string;
   tags: string[];
   link?: string;
   github?: string;
@@ -86,46 +87,28 @@ export type Project = {
   badge?: string;
   is3D?: boolean;
   isAI?: boolean;
+  hasVideo?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    title: "Python Flight & Ticket Booking Bot",
+    title: "Visa Agency Automation Bot",
     description:
-      "High-speed automated ticket reservation & seat monitoring bot written in Python using Playwright/Selenium & AsyncIO. Features real-time route scanning, automated passenger checkout, Cloudflare Turnstile captcha bypassing, proxy pool rotation, and instant alerts via Telegram & WhatsApp.",
-    image: "/projects/ticket-bot.png",
-    tags: [
-      "Python 3.12",
-      "Playwright",
-      "Selenium",
-      "AsyncIO",
-      "Captcha Bypass",
-      "Telegram API",
-      "Automation",
-    ],
-    github: "https://github.com/mhaseeb6662-spec",
-    category: "ai",
-    badge: "Python Automation",
-    isAI: true,
-  },
-  {
-    title: "Passport Appointment & Slot Booking Bot",
-    description:
-      "Autonomous Python bot engineered for high-demand passport appointment tracking and instant slot booking. Implements AI OCR captcha solving, continuous slot polling, dynamic session management, anti-bot detection avoidance, and immediate SMS/calendar alerts.",
-    image: "/projects/passport-bot.png",
+      "High-performance automated visa application & client appointment processing bot engineered for visa consultancy agencies. Features automated form filling, document verification pipelines, appointment slot detection, and end-to-end workflow automation.",
+    image: "/projects/visa-bot.png",
+    video: "/projects/visa-bot.mp4",
     tags: [
       "Python",
-      "Selenium Wire",
-      "Captcha OCR",
-      "AsyncIO",
-      "Anti-Bot Bypass",
-      "REST API",
-      "Bot Engine",
+      "Automation Bot",
+      "Selenium",
+      "Workflow Automation",
+      "Visa Processing",
+      "Video Demo",
     ],
-    github: "https://github.com/mhaseeb6662-spec",
     category: "ai",
-    badge: "Python Bot",
+    badge: "Visa Agency Bot",
     isAI: true,
+    hasVideo: true,
   },
   {
     title: "Haseeb AI — Generative Desktop Assistant",
@@ -143,24 +126,6 @@ export const projects: Project[] = [
     github: "https://github.com/mhaseeb6662-spec/chatgpt",
     category: "ai",
     badge: "Generative AI",
-    isAI: true,
-  },
-  {
-    title: "Eve — Autonomous Slack AI Agent",
-    description:
-      "Autonomous Agentic AI system integrated into Slack channels for automated team workflow execution, multi-step tool calling, incident diagnosis via AWS logs, and dynamic task delegation without human intervention.",
-    image: "/projects/slack-agent.png",
-    tags: [
-      "Agentic AI",
-      "Slack Bot SDK",
-      "Tool Calling",
-      "TypeScript",
-      "Node.js",
-      "Vercel Serverless",
-    ],
-    github: "https://github.com/mhaseeb6662-spec/eve-slack-agent",
-    category: "ai",
-    badge: "Agentic AI",
     isAI: true,
   },
   {

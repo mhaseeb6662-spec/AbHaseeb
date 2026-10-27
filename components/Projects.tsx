@@ -5,7 +5,7 @@ import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
 import { DiGithub } from "react-icons/di";
 import { HiLockClosed } from "react-icons/hi";
-import { BiCube, BiLayer, BiMobileAlt, BiGridAlt, BiBot } from "react-icons/bi";
+import { BiCube, BiLayer, BiMobileAlt, BiGridAlt, BiBot, BiPlay } from "react-icons/bi";
 import { RevealOnScroll } from "./RevealOnScroll";
 import { TiltCard } from "./TiltCard";
 import { OutlineButton } from "./ui/OutlineButton";
@@ -121,14 +121,26 @@ const Projects = () => {
                   )}
 
                   <div className="relative aspect-video overflow-hidden bg-surface-elevated">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover object-top transition-transform duration-700 group-hover:scale-108"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent opacity-75" />
+                    {project.video ? (
+                      <video
+                        src={project.video}
+                        poster={project.image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-108"
+                      />
+                    )}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent opacity-75" />
 
                     {/* Badge */}
                     {project.badge && (
@@ -183,6 +195,12 @@ const Projects = () => {
                             <span>GitHub</span>
                           </a>
                         )}
+                        {project.hasVideo && !project.link && !project.github && (
+                          <div className="glass-strong flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold text-paper shadow-xl pointer-events-none">
+                            <BiPlay className="h-4 w-4 text-cyan animate-pulse" />
+                            <span>Video Demo</span>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -193,7 +211,12 @@ const Projects = () => {
                         {project.title}
                       </h3>
 
-                      {project.confidential || (!project.link && !project.github) ? (
+                      {project.hasVideo && !project.link && !project.github ? (
+                        <div className="flex items-center gap-1 rounded-full border border-cyan/40 bg-cyan/10 px-2 py-0.5 text-[10px] font-mono text-cyan">
+                          <BiPlay className="h-3.5 w-3.5" />
+                          <span>Video</span>
+                        </div>
+                      ) : project.confidential || (!project.link && !project.github) ? (
                         <BsArrowUpRight className="h-5 w-5 flex-shrink-0 text-muted" />
                       ) : (
                         <a
