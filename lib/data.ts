@@ -251,6 +251,24 @@ export const projects: Project[] = [
     is3D: true,
   },
   {
+    title: "Basharat Higher Secondary School — Official Web Portal",
+    description:
+      "Comprehensive official web platform for Basharat Higher Secondary School (BHSS) covering 15+ standardized portals including academic curricula, admissions desk, fee structure, boarding wings, live WhatsApp integration, and optimized responsive performance.",
+    image: "/projects/bhss.png",
+    tags: [
+      "HTML5 & CSS3",
+      "JavaScript (ES6+)",
+      "Responsive Web",
+      "WhatsApp Desk API",
+      "SEO & Performance",
+      "Vercel Deployment",
+    ],
+    link: "https://bhss.ac.pk/",
+    github: "https://github.com/mhaseeb6662-spec/school-web",
+    category: "fullstack",
+    badge: "Official Portal",
+  },
+  {
     title: "8111c — Betting Game Platform",
     description:
       "A high-performance online betting and gaming platform. Built with a robust full-stack architecture to handle real-time interactions, secure data management, and scalable server deployments.",
