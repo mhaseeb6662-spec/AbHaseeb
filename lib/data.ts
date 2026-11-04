@@ -288,22 +288,6 @@ export const projects: Project[] = [
     badge: "Official Portal",
   },
   {
-    title: "8111c — Betting Game Platform",
-    description:
-      "A high-performance online betting and gaming platform. Built with a robust full-stack architecture to handle real-time interactions, secure data management, and scalable server deployments.",
-    image: "/projects/8111c.jpg",
-    tags: [
-      "Next.js",
-      "NestJS",
-      "PostgreSQL",
-      "Server Deployment",
-      "WebSockets",
-      "Full Stack",
-    ],
-    link: "https://8111c.com/",
-    category: "fullstack",
-  },
-  {
     title: "Usama Vet Surgical — eCommerce & Admin Dashboard",
     description:
       "Comprehensive eCommerce platform with a fully functional admin dashboard. Features complete product management, dynamic content control, and robust order tracking, all manageable directly from the admin panel.",
