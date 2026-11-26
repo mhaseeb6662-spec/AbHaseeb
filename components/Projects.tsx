@@ -5,20 +5,38 @@ import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
 import { DiGithub } from "react-icons/di";
 import { HiLockClosed } from "react-icons/hi";
-import { BiCube, BiLayer, BiMobileAlt, BiGridAlt, BiBot, BiPlay } from "react-icons/bi";
+import {
+  BiCube,
+  BiLayer,
+  BiMobileAlt,
+  BiGridAlt,
+  BiBot,
+  BiPlay,
+  BiTrendingUp,
+  BiShieldQuarter,
+  BiServer,
+  BiCheckCircle,
+} from "react-icons/bi";
 import { RevealOnScroll } from "./RevealOnScroll";
 import { TiltCard } from "./TiltCard";
 import { OutlineButton } from "./ui/OutlineButton";
-import { projects, siteConfig, Project } from "@/lib/data";
+import { projects, siteConfig } from "@/lib/data";
 
 type CategoryFilter = "all" | "ai" | "3d" | "fullstack" | "mobile";
 
 const categories: { id: CategoryFilter; label: string; icon: React.ComponentType<{ className?: string }> }[] = [
-  { id: "all", label: "All Projects", icon: BiGridAlt },
-  { id: "ai", label: "Generative AI & Bots", icon: BiBot },
-  { id: "3d", label: "3D & Interactive", icon: BiCube },
-  { id: "fullstack", label: "Full Stack & SaaS", icon: BiLayer },
-  { id: "mobile", label: "Mobile & Apps", icon: BiMobileAlt },
+  { id: "all", label: "All Platforms", icon: BiGridAlt },
+  { id: "fullstack", label: "Enterprise & Full Stack", icon: BiLayer },
+  { id: "ai", label: "AI & Automation", icon: BiBot },
+  { id: "3d", label: "3D & Creative Tech", icon: BiCube },
+  { id: "mobile", label: "Mobile & EdTech", icon: BiMobileAlt },
+];
+
+const telemetryStats = [
+  { label: "Production Platforms", value: "25+", icon: BiServer },
+  { label: "Enterprise ERPs & Systems", value: "5+", icon: BiShieldQuarter },
+  { label: "3D WebGL Experiences", value: "8+", icon: BiCube },
+  { label: "Production Reliability", value: "99.9%", icon: BiCheckCircle },
 ];
 
 const Projects = () => {
@@ -35,19 +53,47 @@ const Projects = () => {
       <div className="pointer-events-none absolute -left-20 top-1/2 h-[300px] w-[300px] rounded-full bg-cyan/10 blur-[120px]" />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6">
-        <RevealOnScroll className="mx-auto mb-8 max-w-3xl text-center sm:mb-12">
-          <span className="eyebrow">Featured Work</span>
+        {/* Section Header */}
+        <RevealOnScroll className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
+          <span className="eyebrow">Production Portfolio</span>
           <h2 className="mb-4 mt-3 font-display text-3xl font-semibold sm:mb-6 sm:mt-4 sm:text-4xl md:text-5xl">
-            Projects that <span className="text-gradient font-normal italic">make an impact</span>
+            Architecting systems that <span className="text-gradient font-normal italic">deliver real impact</span>
           </h2>
           <p className="text-sm text-paper-dim sm:text-base">
-            Explore my featured Generative AI systems, Python automation bots, 3D interactive web experiences,
-            full-stack enterprise platforms, and mobile applications.
+            A curated portfolio of 25+ production deployments spanning high-concurrency enterprise ERPs,
+            intelligent Python automation bots, interactive 3D WebGL platforms, and scalable web architectures.
           </p>
         </RevealOnScroll>
 
+        {/* Executive Telemetry Metrics */}
+        <RevealOnScroll delay={0.08} className="mx-auto mb-10 max-w-4xl sm:mb-12">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {telemetryStats.map((stat) => {
+              const Icon = stat.icon;
+              return (
+                <div
+                  key={stat.label}
+                  className="card-premium flex items-center gap-3 p-3.5 sm:p-4 border-line/60"
+                >
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-royal/20 to-cyan/15 border border-cyan/20 text-cyan">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="font-display text-lg font-bold text-paper sm:text-xl md:text-2xl tracking-tight">
+                      {stat.value}
+                    </div>
+                    <div className="text-[10px] font-mono uppercase tracking-wider text-paper-dim sm:text-[11px]">
+                      {stat.label}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </RevealOnScroll>
+
         {/* Category Filter Tabs */}
-        <RevealOnScroll delay={0.1} className="mb-10 flex flex-wrap items-center justify-center gap-2 sm:mb-12 sm:gap-3">
+        <RevealOnScroll delay={0.12} className="mb-10 flex flex-wrap items-center justify-center gap-2 sm:mb-12 sm:gap-3">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const count =
@@ -105,6 +151,10 @@ const Projects = () => {
               <TiltCard maxTilt={project.is3D ? 8 : 5} className="group h-full">
                 <div
                   className={`card-premium relative h-full overflow-hidden transition-all duration-300 ${
+                    project.featured
+                      ? "ring-1 ring-amber-500/30 hover:ring-amber-500/60 shadow-xl"
+                      : ""
+                  } ${
                     project.is3D
                       ? "border-cyan/30 hover:border-cyan/70 hover:shadow-2xl hover:shadow-cyan/15"
                       : project.isAI
@@ -118,6 +168,9 @@ const Projects = () => {
                   )}
                   {project.isAI && (
                     <div className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-80" />
+                  )}
+                  {project.featured && !project.is3D && !project.isAI && (
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-80" />
                   )}
 
                   <div className="relative aspect-video overflow-hidden bg-surface-elevated">
@@ -142,29 +195,40 @@ const Projects = () => {
                     )}
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent opacity-75" />
 
-                    {/* Badge */}
-                    {project.badge && (
-                      <div
-                        className={`absolute left-3 top-3 z-10 flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium shadow-lg backdrop-blur-md ${
-                          project.isAI
-                            ? "border border-violet-500/40 bg-ink/85 text-violet-300 shadow-violet-500/20"
-                            : "border border-cyan/40 bg-ink/85 text-cyan shadow-cyan/20"
-                        }`}
-                      >
-                        {project.isAI ? (
-                          <BiBot className="h-3.5 w-3.5 text-violet-400 animate-pulse" />
-                        ) : (
-                          <BiCube className="h-3.5 w-3.5 text-cyan animate-pulse" />
-                        )}
-                        <span>{project.badge}</span>
-                      </div>
-                    )}
+                    {/* Badges Container */}
+                    <div className="absolute left-3 top-3 z-10 flex flex-wrap items-center gap-1.5">
+                      {project.featured && (
+                        <div className="flex items-center gap-1 rounded-full border border-amber-400/40 bg-ink/90 px-2.5 py-1 text-[10px] font-mono font-semibold text-amber-300 shadow-lg shadow-amber-500/20 backdrop-blur-md">
+                          <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
+                          <span>FLAGSHIP</span>
+                        </div>
+                      )}
+                      {project.badge && (
+                        <div
+                          className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-medium shadow-lg backdrop-blur-md ${
+                            project.isAI
+                              ? "border border-violet-500/40 bg-ink/85 text-violet-300 shadow-violet-500/20"
+                              : "border border-cyan/40 bg-ink/85 text-cyan shadow-cyan/20"
+                          }`}
+                        >
+                          {project.isAI ? (
+                            <BiBot className="h-3.5 w-3.5 text-violet-400 animate-pulse" />
+                          ) : (
+                            <BiCube className="h-3.5 w-3.5 text-cyan animate-pulse" />
+                          )}
+                          <span>{project.badge}</span>
+                        </div>
+                      )}
+                    </div>
 
                     {project.confidential ? (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-ink/75 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100 active:opacity-100">
-                        <HiLockClosed className="h-5 w-5 text-cyan sm:h-6 sm:w-6" />
-                        <span className="text-center font-mono text-[10px] uppercase tracking-wide text-paper-dim sm:text-xs">
-                          Private Company Project
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-ink/80 p-4 text-center opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100 active:opacity-100">
+                        <HiLockClosed className="h-6 w-6 text-cyan" />
+                        <span className="font-mono text-xs uppercase tracking-wider text-paper font-semibold">
+                          Enterprise System &middot; Protected by NDA
+                        </span>
+                        <span className="text-[11px] text-paper-dim max-w-xs">
+                          Live demo and source code restricted per client confidentiality agreements.
                         </span>
                       </div>
                     ) : (
@@ -230,7 +294,18 @@ const Projects = () => {
                         </a>
                       )}
                     </div>
+
                     <p className="text-sm leading-relaxed text-paper-dim">{project.description}</p>
+
+                    {/* Impact Callout */}
+                    {project.impact && (
+                      <div className="flex items-center gap-2 rounded-lg border border-cyan/25 bg-cyan/5 px-3 py-1.5 text-xs">
+                        <BiTrendingUp className="h-4 w-4 flex-shrink-0 text-cyan" />
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-cyan font-semibold">Impact:</span>
+                        <span className="text-[11px] font-medium text-paper truncate">{project.impact}</span>
+                      </div>
+                    )}
+
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => {
                         const isAiTag =
@@ -264,9 +339,10 @@ const Projects = () => {
                         );
                       })}
                     </div>
+
                     {project.confidential && (
                       <p className="font-mono text-[10px] uppercase tracking-wide text-muted sm:text-[11px]">
-                        Demo unavailable due to company confidentiality
+                        Enterprise Client System &middot; Architecture protected under NDA
                       </p>
                     )}
                   </div>
