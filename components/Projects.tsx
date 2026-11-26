@@ -33,7 +33,7 @@ const categories: { id: CategoryFilter; label: string; icon: React.ComponentType
 ];
 
 const telemetryStats = [
-  { label: "Production Platforms", value: "25+", icon: BiServer },
+  { label: "Production Platforms", value: "27+", icon: BiServer },
   { label: "Enterprise ERPs & Systems", value: "5+", icon: BiShieldQuarter },
   { label: "3D WebGL Experiences", value: "8+", icon: BiCube },
   { label: "Production Reliability", value: "99.9%", icon: BiCheckCircle },
@@ -60,7 +60,7 @@ const Projects = () => {
             Architecting systems that <span className="text-gradient font-normal italic">deliver real impact</span>
           </h2>
           <p className="text-sm text-paper-dim sm:text-base">
-            A curated portfolio of 25+ production deployments spanning high-concurrency enterprise ERPs,
+            A curated portfolio of 27+ production deployments spanning high-concurrency enterprise ERPs,
             intelligent Python automation bots, interactive 3D WebGL platforms, and scalable web architectures.
           </p>
         </RevealOnScroll>

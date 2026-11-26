@@ -142,6 +142,29 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Lumière Cosmetics — Luxury Beauty & Skincare eCommerce Platform",
+    description:
+      "Omnichannel beauty and skincare eCommerce platform engineered with a high-performance product catalog, dynamic bundle pricing engines, creator & affiliate partner portal, cart and checkout architecture, and integrated live CMS dynamic control.",
+    image: "/projects/cosmetics.png",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "eCommerce Engine",
+      "Live CMS Control",
+      "Affiliate Portal",
+      "RESTful API",
+    ],
+    link: "https://cosmetics-platform-frontend-99hx.vercel.app/",
+    github: "https://github.com/mhaseeb6662-spec/cosmetics-platform-frontend",
+    confidential: false,
+    category: "fullstack",
+    badge: "Cosmetics eCommerce Platform",
+    impact: "Live Omni-Channel Store",
+    featured: true,
+  },
+  {
     title: "Basharat Higher Secondary School — Official Institutional Web Portal",
     description:
       "Comprehensive web platform for Basharat Higher Secondary School (BHSS) integrating 15+ institutional sub-portals including academic pathways, admissions desk, fee structures, board examination records, and real-time WhatsApp inquiry routing.",
